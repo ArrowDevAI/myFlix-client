@@ -2,28 +2,25 @@ import React from "react";
 import { useState } from "react";
 import { MovieCard } from "../movie-card/movie-card";
 import {MovieView} from "../movie-view/movie-view"
+import PropTypes from "prop-types";
 
 const MainView = () => {
-  const [movies, setMovies] = useState([
-    {
-      id: 1,
-      title: "Star Wars Episode IV: A New Hope",
-      image: "https://i.pinimg.com/originals/88/d5/f1/88d5f1fb96109747539d74225f520183.jpg",
-      director: "George Lucas",
-    },
-    {
-      id: 2,
-      title: "Star Wars Episode III: Revenge of the Sith",
-      image: "https://th.bing.com/th/id/OIP.jMtQqT_spmw3a-oTlxoDYAAAAA?rs=1&pid=ImgDetMain",
-      director: "George Lucas",
-    },
-    {
-      id: 3,
-      title: "Star Wars Episode II: Attack of the Clones",
-      image: "https://th.bing.com/th/id/OIP._XDgiiblwTmUeDO1r6ijRAAAAA?rs=1&pid=ImgDetMain",
-      director: "George Lucas",
-    },
-  ]);
+    const [movies, setMovies] = useState(null);
+    useEffect(() => {
+        fetch("https://movieurl-6be02303c42f.herokuapp.com/")
+          .then((response) => response.json())
+          .then((data) => {
+            const moviesFromApi = data.docs.map((doc) => {
+              return {
+                id: doc.key,
+                title: doc.title,
+                image: `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`,
+                author: doc.author_name?.[0],
+              };
+            });
+            setMovies(moviesFromApi);
+          });
+      }, []);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
 if (selectedMovie) {
