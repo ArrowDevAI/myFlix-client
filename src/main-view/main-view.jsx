@@ -6,17 +6,19 @@ import PropTypes from "prop-types";
 
 const MainView = () => {
     const [movies, setMovies] = useState([]);
-    const [selectedMovie, setSelectedMovie]= useState([]);
-
+    const [selectedMovie, setSelectedMovie]= useState(null);
+    
     useEffect(() => {
-        fetch("https://git.heroku.com/movieurl.git")
+        fetch("https://movieurl-6be02303c42f.herokuapp.com/movies")
           .then((response) => response.json())
           .then((data) =>{
             console.log(data);
-            const moviesFromApi = data.docs.map((doc) => {
+            const moviesFromApi = data.map((doc) => {
               return {
-                id: doc.key,
-                title: doc.title,
+                id: doc._id,
+                title: doc.Title,
+                image: doc.ImagePath,
+                director: doc.Director.Name
               };
             });
             setMovies(moviesFromApi);
@@ -28,22 +30,25 @@ if (selectedMovie) {
     setSelectedMovie(null)}} />
   );
 }
+if (movies.length === 0) {
+    return <div>The list is empty!</div>;
+  }
 
   
   return (
     <div>
-      {movies.map((movie) => (
+      {movies.map((movieData) => (
         <MovieCard 
-        key= {movies.id}
-        movieData={movie}
+        key= {movieData.id}
+        movieData={movieData}
         onMovieClick={(newSelectedMovie)=>{
         setSelectedMovie(newSelectedMovie);
-        }} />
+        }} 
+        />
       ))}
     </div>
   );
 };
-
 
 
 export { MainView };

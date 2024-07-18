@@ -27242,14 +27242,16 @@ var _s = $RefreshSig$();
 const MainView = ()=>{
     _s();
     const [movies, setMovies] = (0, _react.useState)([]);
-    const [selectedMovie, setSelectedMovie] = (0, _react.useState)([]);
+    const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
-        fetch("https://movieurl-6be02303c42f.herokuapp.com/").then((response)=>response.json()).then((data)=>{
+        fetch("https://movieurl-6be02303c42f.herokuapp.com/movies").then((response)=>response.json()).then((data)=>{
             console.log(data);
-            const moviesFromApi = data.docs.map((doc)=>{
+            const moviesFromApi = data.map((doc)=>{
                 return {
-                    id: doc.key,
-                    title: doc.title
+                    id: doc._id,
+                    title: doc.Title,
+                    image: doc.ImagePath,
+                    director: doc.Director.Name
                 };
             });
             setMovies(moviesFromApi);
@@ -27262,27 +27264,34 @@ const MainView = ()=>{
         }
     }, void 0, false, {
         fileName: "src/main-view/main-view.jsx",
-        lineNumber: 27,
+        lineNumber: 29,
         columnNumber: 11
     }, undefined);
+    if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "The list is empty!"
+    }, void 0, false, {
+        fileName: "src/main-view/main-view.jsx",
+        lineNumber: 34,
+        columnNumber: 12
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
-                movieData: movie,
+        children: movies.map((movieData)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
+                movieData: movieData,
                 onMovieClick: (newSelectedMovie)=>{
                     setSelectedMovie(newSelectedMovie);
                 }
-            }, movies.id, false, {
+            }, movieData.id, false, {
                 fileName: "src/main-view/main-view.jsx",
-                lineNumber: 36,
+                lineNumber: 41,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/main-view/main-view.jsx",
-        lineNumber: 34,
+        lineNumber: 39,
         columnNumber: 5
     }, undefined);
 };
-_s(MainView, "ioyrFv34Lmi2lM+zrMvWFxN8+7Q=");
+_s(MainView, "PO+XgOji7E32nFJj3H5UPLPJ7w4=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27313,14 +27322,15 @@ const MovieCard = ({ movieData, onMovieClick })=>{
         children: movieData.title
     }, void 0, false, {
         fileName: "src/movie-card/movie-card.jsx",
-        lineNumber: 3,
-        columnNumber: 12
+        lineNumber: 4,
+        columnNumber: 9
     }, undefined);
 };
 _c = MovieCard;
-MovieCard.PropTypes = {
-    movie: (0, _propTypesDefault.default).shape({
-        title: (0, _propTypesDefault.default).string
+MovieCard.propTypes = {
+    movieData: (0, _propTypesDefault.default).shape({
+        title: (0, _propTypesDefault.default).string,
+        director: (0, _propTypesDefault.default).string
     }).isRequired,
     onMovieClick: (0, _propTypesDefault.default).func.isRequired
 };
@@ -28258,7 +28268,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MovieView", ()=>MovieView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const MovieView = ({ movieData })=>{
+const MovieView = ({ movieData, onBackClick })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28316,6 +28326,14 @@ const MovieView = ({ movieData })=>{
             }, void 0, true, {
                 fileName: "src/movie-view/movie-view.jsx",
                 lineNumber: 11,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: onBackClick,
+                children: "Back"
+            }, void 0, false, {
+                fileName: "src/movie-view/movie-view.jsx",
+                lineNumber: 15,
                 columnNumber: 9
             }, undefined)
         ]
