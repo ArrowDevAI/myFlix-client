@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 const MainView = () => {
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie]= useState(null);
-    
+
 
 if (selectedMovie) {
   return (<MovieView movieData = {selectedMovie} onBackClick={()=> {
