@@ -20,13 +20,13 @@ const handleSubmit = (event) => {
     .then ((response)=>response.json())
     .then ((data)=>{
         console.log("Login Response: ", data);
-        if(data.user) {
+        if (data.user) {
             localStorage.setItem("user", JSON.stringify(data.user));
-            localStorage.setItem("token", data.token)
+            localStorage.setItem("token", data.token);
             onLoggedIn(data.user, data.token);
-        }else{
-            alert ("User Not Found")
-        }
+          } else {
+            alert("No such user");
+          }
     })
     .catch ((e)=>{
         alert ("Something Went Wrong");
