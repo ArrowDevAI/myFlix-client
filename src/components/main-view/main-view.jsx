@@ -77,3 +77,5 @@ if (movies.length === 0) {
 };
 
 export { MainView };
+
+added some stuff
