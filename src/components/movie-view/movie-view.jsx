@@ -14,10 +14,6 @@ const MovieView = ({ movieData, onBackClick }) => {
           <span>Director: </span>
           <span>{movieData.director}</span>
         </div>
-        <div>
-          <span>Description: </span>
-          <span>{movieData.description}</span>
-        </div>
         <button className= 'back-button' onClick={onBackClick}>Back</button>
       </div>
       
