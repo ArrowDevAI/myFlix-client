@@ -71,7 +71,7 @@ if (movies.length === 0) {
         }} 
         />
       ))}
-      <button onClick={() => { setUser(null); setToken(null); localStorage.clear(); }}>Logout</button>
+      <button className= 'back-button' onClick={() => { setUser(null); setToken(null); localStorage.clear(); }}>Logout</button>
     </div>
   );
 };

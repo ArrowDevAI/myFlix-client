@@ -2953,11 +2953,7 @@ $parcel$ReactRefreshHelpers$98a3.prelude(module);
 try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
-<<<<<<< HEAD
-var _mainView = require("./main-view/main-view");
-=======
 var _mainView = require("./components/main-view/main-view");
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 var _indexScss = require("./index.scss");
 const MyFlixApplication = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
@@ -2982,11 +2978,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-<<<<<<< HEAD
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","./main-view/main-view":"5G2PO"}],"iTorj":[function(require,module,exports) {
-=======
 },{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","./components/main-view/main-view":"4gflv"}],"iTorj":[function(require,module,exports) {
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27367,19 +27359,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-<<<<<<< HEAD
-},{"d5f41d1f18f43855":"37ENc"}],"5G2PO":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4cd9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4cd9.prelude(module);
-=======
 },{"d5f41d1f18f43855":"37ENc"}],"4gflv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f7a6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$f7a6.prelude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27390,32 +27374,6 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _movieCard = require("../movie-card/movie-card");
 var _movieView = require("../movie-view/movie-view");
-<<<<<<< HEAD
-var _s = $RefreshSig$();
-const MainView = ()=>{
-    _s();
-    const [movies, setMovies] = (0, _react.useState)([
-        {
-            id: 1,
-            title: "Star Wars Episode IV: A New Hope",
-            image: "https://i.pinimg.com/originals/88/d5/f1/88d5f1fb96109747539d74225f520183.jpg",
-            director: "George Lucas"
-        },
-        {
-            id: 2,
-            title: "Star Wars Episode III: Revenge of the Sith",
-            image: "https://th.bing.com/th/id/OIP.jMtQqT_spmw3a-oTlxoDYAAAAA?rs=1&pid=ImgDetMain",
-            director: "George Lucas"
-        },
-        {
-            id: 3,
-            title: "Star Wars Episode II: Attack of the Clones",
-            image: "https://th.bing.com/th/id/OIP._XDgiiblwTmUeDO1r6ijRAAAAA?rs=1&pid=ImgDetMain",
-            director: "George Lucas"
-        }
-    ]);
-    const [selectedMovie, setSelectedMovie] = (0, _react.useState)(null);
-=======
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _loginView = require("../login-view/login-view");
@@ -27450,19 +27408,6 @@ const MainView = ()=>{
     }, [
         token
     ]);
-<<<<<<< HEAD
-    if (!user) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginView.LoginView), {
-        onLoggedIn: (user, token)=>{
-            setUser(user);
-            setToken(token);
-        }
-    }, void 0, false, {
-        fileName: "src/components/main-view/main-view.jsx",
-        lineNumber: 40,
-        columnNumber: 12
-    }, undefined);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-=======
     if (!user) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginView.LoginView), {
@@ -27483,44 +27428,12 @@ const MainView = ()=>{
             }, undefined)
         ]
     }, void 0, true);
->>>>>>> 0ac4e3606e4b52bbdfef841502332a0816a31e05
     if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
         movieData: selectedMovie,
         onBackClick: ()=>{
             setSelectedMovie(null);
         }
     }, void 0, false, {
-<<<<<<< HEAD
-        fileName: "src/main-view/main-view.jsx",
-        lineNumber: 30,
-        columnNumber: 11
-    }, undefined);
-    if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "The list is currently empty."
-    }, void 0, false, {
-        fileName: "src/main-view/main-view.jsx",
-        lineNumber: 36,
-        columnNumber: 12
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
-                movieData: movie,
-                onMovieClick: (newSelectedMovie)=>{
-                    setSelectedMovie(newSelectedMovie);
-                }
-            }, movies.id, false, {
-                fileName: "src/main-view/main-view.jsx",
-                lineNumber: 42,
-                columnNumber: 9
-            }, undefined))
-    }, void 0, false, {
-        fileName: "src/main-view/main-view.jsx",
-        lineNumber: 40,
-        columnNumber: 5
-    }, undefined);
-};
-_s(MainView, "UIW9vZyvm+zN3Dd2nQEHzwwY5hE=");
-=======
         fileName: "src/components/main-view/main-view.jsx",
         lineNumber: 54,
         columnNumber: 11
@@ -27563,53 +27476,29 @@ _s(MainView, "UIW9vZyvm+zN3Dd2nQEHzwwY5hE=");
         columnNumber: 5
     }, undefined);
 };
-<<<<<<< HEAD
-_s(MainView, "ld1mNqbzEgxPu9ZfASjBJ7ZrUMw=");
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-=======
 _s(MainView, "BlfpIHShIpB8l6l5+I0r6zS3Vck=");
->>>>>>> 0ac4e3606e4b52bbdfef841502332a0816a31e05
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
 
-<<<<<<< HEAD
-  $parcel$ReactRefreshHelpers$4cd9.postlude(module);
-=======
   $parcel$ReactRefreshHelpers$f7a6.postlude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"dAoTw","../movie-view/movie-view":"5dzJV","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"dAoTw":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b6cc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b6cc.prelude(module);
-=======
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","prop-types":"kRCxO","../login-view/login-view":"9YtA0","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"bwuIu":[function(require,module,exports) {
-=======
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","prop-types":"kRCxO","../login-view/login-view":"9YtA0","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","../signup-view/signup-view":"4OGiN"}],"bwuIu":[function(require,module,exports) {
->>>>>>> 0ac4e3606e4b52bbdfef841502332a0816a31e05
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$67b2.prelude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MovieCard", ()=>MovieCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-<<<<<<< HEAD
-=======
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 const MovieCard = ({ movieData, onMovieClick })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         onClick: ()=>{
@@ -27617,18 +27506,6 @@ const MovieCard = ({ movieData, onMovieClick })=>{
         },
         children: movieData.title
     }, void 0, false, {
-<<<<<<< HEAD
-        fileName: "src/movie-card/movie-card.jsx",
-        lineNumber: 2,
-        columnNumber: 12
-    }, undefined);
-};
-_c = MovieCard;
-var _c;
-$RefreshReg$(_c, "MovieCard");
-
-  $parcel$ReactRefreshHelpers$b6cc.postlude(module);
-=======
         fileName: "src/components/movie-card/movie-card.jsx",
         lineNumber: 4,
         columnNumber: 9
@@ -27646,14 +27523,10 @@ var _c;
 $RefreshReg$(_c, "MovieCard");
 
   $parcel$ReactRefreshHelpers$67b2.postlude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-<<<<<<< HEAD
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"5JatU":[function(require,module,exports) {
-=======
 },{"react/jsx-dev-runtime":"iTorj","prop-types":"kRCxO","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"kRCxO":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -28402,7 +28275,6 @@ printWarning = function(text) {
 module.exports = checkPropTypes;
 
 },{"bbd10a3ce0793994":"lJuig","6e9df76f54fb4a31":"kRbFs"}],"5JatU":[function(require,module,exports) {
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -28432,51 +28304,32 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-<<<<<<< HEAD
-},{}],"5dzJV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$40f8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$40f8.prelude(module);
-=======
 },{}],"ggaUx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e9f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$e9f6.prelude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MovieView", ()=>MovieView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-<<<<<<< HEAD
-const MovieView = ({ movieData })=>{
-=======
+var _movieViewScss = require("./movie-view.scss");
 const MovieView = ({ movieData, onBackClick })=>{
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: movieData.image
                 }, void 0, false, {
-<<<<<<< HEAD
-                    fileName: "src/movie-view/movie-view.jsx",
-=======
                     fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                    lineNumber: 5,
+                    lineNumber: 7,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
-<<<<<<< HEAD
-                fileName: "src/movie-view/movie-view.jsx",
-=======
                 fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28484,33 +28337,21 @@ const MovieView = ({ movieData, onBackClick })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "Title: "
                     }, void 0, false, {
-<<<<<<< HEAD
-                        fileName: "src/movie-view/movie-view.jsx",
-=======
                         fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                        lineNumber: 8,
+                        lineNumber: 10,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movieData.title
                     }, void 0, false, {
-<<<<<<< HEAD
-                        fileName: "src/movie-view/movie-view.jsx",
-=======
                         fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                        lineNumber: 9,
+                        lineNumber: 11,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
-<<<<<<< HEAD
-                fileName: "src/movie-view/movie-view.jsx",
-=======
                 fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                lineNumber: 7,
+                lineNumber: 9,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28518,53 +28359,36 @@ const MovieView = ({ movieData, onBackClick })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: "Director: "
                     }, void 0, false, {
-<<<<<<< HEAD
-                        fileName: "src/movie-view/movie-view.jsx",
-=======
                         fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         children: movieData.director
                     }, void 0, false, {
-<<<<<<< HEAD
-                        fileName: "src/movie-view/movie-view.jsx",
-=======
                         fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-                        lineNumber: 13,
+                        lineNumber: 15,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
-<<<<<<< HEAD
-                fileName: "src/movie-view/movie-view.jsx",
-                lineNumber: 11,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/movie-view/movie-view.jsx",
-=======
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "back-button",
                 onClick: onBackClick,
                 children: "Back"
             }, void 0, false, {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/movie-view/movie-view.jsx",
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 7
     }, undefined);
 };
@@ -28572,19 +28396,12 @@ _c = MovieView;
 var _c;
 $RefreshReg$(_c, "MovieView");
 
-<<<<<<< HEAD
-  $parcel$ReactRefreshHelpers$40f8.postlude(module);
-=======
   $parcel$ReactRefreshHelpers$e9f6.postlude(module);
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-<<<<<<< HEAD
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}]},["iiDrr","jlkyJ","d8Dch"], "d8Dch", "parcelRequireaec4")
-=======
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"9YtA0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./movie-view.scss":"jnlR5","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"jnlR5":[function() {},{}],"9YtA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9fee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28840,6 +28657,5 @@ $RefreshReg$(_c, "SignupView");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}]},["iiDrr","jlkyJ","d8Dch"], "d8Dch", "parcelRequireaec4")
->>>>>>> 65a1a36aaaafe102b07dca674c9f0e0540a3372c
 
 //# sourceMappingURL=index.0d6fcb10.js.map
