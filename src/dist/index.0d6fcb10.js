@@ -27486,7 +27486,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","prop-types":"kRCxO","../login-view/login-view":"9YtA0","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","../signup-view/signup-view":"4OGiN"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","../movie-view/movie-view":"ggaUx","../login-view/login-view":"9YtA0","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","../signup-view/signup-view":"4OGiN","prop-types":"7wKI2"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27527,23 +27527,23 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","prop-types":"kRCxO","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"kRCxO":[function(require,module,exports) {
+},{"prop-types":"7wKI2","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE"}],"7wKI2":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ var ReactIs = require("41fa203826c8c83a");
+ */ var ReactIs = require("96e34ae03f5a2631");
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
 var throwOnDirectAccess = true;
-module.exports = require("7fda382be1df1feb")(ReactIs.isElement, throwOnDirectAccess);
+module.exports = require("cb216452e2171041")(ReactIs.isElement, throwOnDirectAccess);
 
-},{"41fa203826c8c83a":"cV0O5","7fda382be1df1feb":"ikXZ7"}],"cV0O5":[function(require,module,exports) {
+},{"96e34ae03f5a2631":"7EuwB","cb216452e2171041":"bBUgD"}],"7EuwB":[function(require,module,exports) {
 "use strict";
-module.exports = require("955cf7d61e342dcd");
+module.exports = require("2255125a8e8b1051");
 
-},{"955cf7d61e342dcd":"ahMIQ"}],"ahMIQ":[function(require,module,exports) {
+},{"2255125a8e8b1051":"5DsXl"}],"5DsXl":[function(require,module,exports) {
 /** @license React v16.13.1
  * react-is.development.js
  *
@@ -27700,18 +27700,18 @@ module.exports = require("955cf7d61e342dcd");
     exports.typeOf = typeOf;
 })();
 
-},{}],"ikXZ7":[function(require,module,exports) {
+},{}],"bBUgD":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */ "use strict";
-var ReactIs = require("a12f1e24f394e570");
-var assign = require("d74134e0e14c06b1");
-var ReactPropTypesSecret = require("f447e48a1b3b99c4");
-var has = require("beefcd9be3e3b0b5");
-var checkPropTypes = require("76bd79efafef057e");
+var ReactIs = require("c437388b089702c3");
+var assign = require("c067a60101d8520c");
+var ReactPropTypesSecret = require("74a0f89a70b9f3c2");
+var has = require("18441b11647bc78");
+var checkPropTypes = require("bec3f6ff89f0b072");
 var printWarning = function() {};
 printWarning = function(text) {
     var message = "Warning: " + text;
@@ -28138,7 +28138,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return ReactPropTypes;
 };
 
-},{"a12f1e24f394e570":"cV0O5","d74134e0e14c06b1":"3LWSa","f447e48a1b3b99c4":"lJuig","beefcd9be3e3b0b5":"kRbFs","76bd79efafef057e":"5Bph5"}],"3LWSa":[function(require,module,exports) {
+},{"c437388b089702c3":"7EuwB","c067a60101d8520c":"7OXxh","74a0f89a70b9f3c2":"jZTZJ","18441b11647bc78":"fqKuf","bec3f6ff89f0b072":"5VwyJ"}],"7OXxh":[function(require,module,exports) {
 /*
 object-assign
 (c) Sindre Sorhus
@@ -28193,7 +28193,7 @@ module.exports = shouldUseNative() ? Object.assign : function(target, source) {
     return to;
 };
 
-},{}],"lJuig":[function(require,module,exports) {
+},{}],"jZTZJ":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -28203,10 +28203,10 @@ module.exports = shouldUseNative() ? Object.assign : function(target, source) {
 var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
 module.exports = ReactPropTypesSecret;
 
-},{}],"kRbFs":[function(require,module,exports) {
+},{}],"fqKuf":[function(require,module,exports) {
 module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
-},{}],"5Bph5":[function(require,module,exports) {
+},{}],"5VwyJ":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -28214,9 +28214,9 @@ module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
  * LICENSE file in the root directory of this source tree.
  */ "use strict";
 var printWarning = function() {};
-var ReactPropTypesSecret = require("bbd10a3ce0793994");
+var ReactPropTypesSecret = require("24ba1e58d167a82c");
 var loggedTypeFailures = {};
-var has = require("6e9df76f54fb4a31");
+var has = require("898bc82f39d83f7c");
 printWarning = function(text) {
     var message = "Warning: " + text;
     if (typeof console !== "undefined") console.error(message);
@@ -28274,7 +28274,7 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"bbd10a3ce0793994":"lJuig","6e9df76f54fb4a31":"kRbFs"}],"5JatU":[function(require,module,exports) {
+},{"24ba1e58d167a82c":"jZTZJ","898bc82f39d83f7c":"fqKuf"}],"5JatU":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
