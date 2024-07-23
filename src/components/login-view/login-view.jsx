@@ -1,4 +1,10 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./login-view.scss";
 import {useState} from 'react';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+
 
 const LoginView = ({onLoggedIn}) => {
 const [username, setUsername] = useState('');    
@@ -33,33 +39,31 @@ const handleSubmit = (event) => {
     });
     };
 
-    return(
-        <form onSubmit = {handleSubmit}>
-            <label>
+    return (
+        <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formUsername">
+          <Form.Label>Username:</Form.Label>
+          <Form.Control
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            minLength="3" 
+          />
+        </Form.Group>
+        <Form.Group controlId = "formPassword">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control
+            type= 'password'
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
+            minLength='3'
+            />
+        </Form.Group>
 
-                Username: 
-                <input 
-                type = 'text'
-                value= {username}
-                onChange={(e)=> setUsername(e.target.value)} required 
-                 />
-
-            </label>
-
-            <label>
-
-                Password: 
-                <input 
-                type = 'password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}required
-                />
-            
-            </label>
-
-            <button type ='submit'>Submit</button>
-
-        </form>
+        <Button className ='submit-button' type="submit" > Submit </Button>
+        </Form>
+        
     );
 };
 
