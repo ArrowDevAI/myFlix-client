@@ -30,6 +30,7 @@ const MainView = () => {
             director: doc.Director.Name,
             description: doc.Description,
             runtime: doc.Runtime
+           
           };
         });
         setMovies(moviesFromApi);
