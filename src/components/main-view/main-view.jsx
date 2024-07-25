@@ -43,6 +43,21 @@ const MainView = () => {
 
 return (
   <>
+  <Row>
+  <Col className = "mt-3 mb-3" md={6}>
+          <button
+            className="button"
+            onClick={() => {
+              setUser(null);
+              setToken(null);
+              localStorage.clear();
+            }}
+          >
+            Logout
+          </button>
+        </Col>
+      </Row> 
+      
 <Row className = "justify-content-md-center">
   {!user ? (
 
@@ -76,20 +91,7 @@ return (
 
   )}
 </Row>
-<Row >
-  <Col md={6}>
-          <button
-            className="button"
-            onClick={() => {
-              setUser(null);
-              setToken(null);
-              localStorage.clear();
-            }}
-          >
-            Logout
-          </button>
-        </Col>
-      </Row>
+
     </>
   );
 };
