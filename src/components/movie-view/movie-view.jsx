@@ -4,7 +4,7 @@ const MovieView = ({ movieData, onBackClick }) => {
     return (
       <div>
         <div>
-          <img src={movieData.image} />
+          <img style={{ width: '100%' }} alt={movieData.title} src={movieData.image} />
         </div>
         <div>
           <span>Title: </span>
@@ -14,7 +14,7 @@ const MovieView = ({ movieData, onBackClick }) => {
           <span>Director: </span>
           <span>{movieData.director}</span>
         </div>
-        <button className= 'back-button' onClick={onBackClick}>Back</button>
+        <button className= 'button' onClick={onBackClick}>Back</button>
       </div>
       
     );

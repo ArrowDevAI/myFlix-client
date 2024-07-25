@@ -57,11 +57,11 @@ const handleSubmit = (event) => {
             type= 'password'
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
-            minLength='3'
+            minLength="3"
             />
         </Form.Group>
 
-        <Button className ='submit-button' type="submit" > Submit </Button>
+        <Button className ='button' type="submit" > Submit </Button>
         </Form>
         
     );

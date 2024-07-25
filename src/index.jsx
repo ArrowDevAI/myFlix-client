@@ -6,11 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
 
+
 const MyFlixApplication = () => {
   return (
-  <Container style={{border: "1px solid red"}}>
+<Container>
   <MainView/>
-  </Container>
+</Container>
 );
 };
 
