@@ -1,5 +1,7 @@
 
 import {useState} from "react";
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
 const SignupView = () => {
 
     const [username, setUsername] = useState("");
@@ -16,7 +18,7 @@ const SignupView = () => {
         Email: email,
         Birthday: birthday
     };
-    console.log("sendng data: ", data)
+
     fetch ("https://movieurl-6be02303c42f.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify(data),
