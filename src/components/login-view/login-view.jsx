@@ -25,7 +25,7 @@ const handleSubmit = (event) => {
     })
     .then ((response)=>response.json())
     .then ((data)=>{
-        console.log("Login Response: ", data);
+        
         if (data.user) {
             localStorage.setItem("user", JSON.stringify(data.user));
             localStorage.setItem("token", data.token);
