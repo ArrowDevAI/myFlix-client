@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 import {Button, Card} from "react-bootstrap";
+import "./movie-card.scss"
 
 const MovieCard = ({ movieData, onMovieClick }) => {
-    console.log("Movie Data: ", movieData);
     return (
         
-        <Card style={{ width: '20rem' }}>
+        <Card className = "h-100">
           <Card.Img variant="top" src={movieData.image} />
           <Card.Body>
             <Card.Title>{movieData.title}</Card.Title>
-            <Card.Text>{movieData.runtime}</Card.Text>
+            <Card.Text style={{textAlign: "right"}}>{movieData.runtime}</Card.Text>
             <Button onClick={() => onMovieClick(movieData)} variant="link">
               View
             </Button>
@@ -17,7 +17,7 @@ const MovieCard = ({ movieData, onMovieClick }) => {
         </Card>
       );
     };
-   
+    
 
   MovieCard.propTypes = {
     movieData: PropTypes.shape({
