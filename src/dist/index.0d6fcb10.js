@@ -2989,7 +2989,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"bgpYE","./components/main-view/main-view":"4gflv","react-bootstrap/Container":"hEdsw","@parcel/transformer-js/src/esmodule-helpers.js":"5JatU","bootstrap/dist/css/bootstrap.min.css":"i5LP7"}],"iTorj":[function(require,module,exports) {
-"use strict";
+    "use strict";
 module.exports = require("ee51401569654d91");
 
 },{"ee51401569654d91":"48uCM"}],"48uCM":[function(require,module,exports) {
