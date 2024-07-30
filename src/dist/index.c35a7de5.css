@@ -1,9 +1,7 @@
-.my-flix {
-  color: #4682b4;
-}
-
 button.button {
   color: #f5f5f5;
+  cursor: pointer;
+  cursor: pointer;
   cursor: pointer;
   cursor: pointer;
   background-color: #1e90ff;
@@ -12063,13 +12061,7 @@ textarea.form-control-lg {
   }
 }
 
-button.button {
-  color: #f5f5f5;
-  cursor: pointer;
-  cursor: pointer;
-  background-color: #1e90ff;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 12px;
+.my-flix {
+  color: #4682b4;
 }
 /*# sourceMappingURL=index.c35a7de5.css.map */
