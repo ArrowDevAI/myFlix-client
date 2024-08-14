@@ -6,13 +6,15 @@ return (
     <Navbar bg= 'light' expand = 'lg'>
         <Container>
             <Navbar.Brand as = {Link} to = "/">
-            MyFlix App
+            MyFlix
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls='basic-navbar-nav'/>
            
             <Navbar.Collapse id = 'basic-navbard-nav'>
                 <Nav className = 'me-auto'>
+
+   
                 {!user && (
               <>
                 <Nav.Link as={Link} to = "/login">
@@ -24,6 +26,8 @@ return (
                 </Nav.Link>
               </>
             )}
+
+
             {user && (
                 <>
                     <Nav.Link as = {Link} to = "/" >
@@ -33,6 +37,10 @@ return (
                     <Nav.Link onClick ={onLoggedOut}> 
                         Logout
                     </Nav.Link>               
+
+                    <Nav.Link as = {Link} to = "/profile" >
+                    Profile
+                    </Nav.Link>
                 </>
             )}
                 </Nav>
