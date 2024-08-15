@@ -30,7 +30,6 @@ const FavoriteView = ({ movies, token, user, onUpdateUser }) => {
             // Remove the movie from the local state
             const updatedFavorites = userFavorites.filter(movie => movie.id !== movieId);
             setUserFavorites(updatedFavorites);
-
             // Update user data in the parent component
             onUpdateUser({
                 ...user,
@@ -40,7 +39,6 @@ const FavoriteView = ({ movies, token, user, onUpdateUser }) => {
             console.error("Error removing favorite movie:", error);
         }
     };
-
     return (
         <>
             <Nav fill variant="tabs" defaultActiveKey="/">

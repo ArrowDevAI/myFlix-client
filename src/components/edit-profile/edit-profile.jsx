@@ -26,8 +26,6 @@ const EditProfile = ({ user, token, onUpdateUser }) => {
             );
 
             onUpdateUser(response.data)
-            
-            console.log("Respnse from API: ", response.data)
      
             alert(`${editedUser.username} updated successfully`);
            
