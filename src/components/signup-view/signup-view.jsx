@@ -10,29 +10,29 @@ const SignupView = () => {
     const [birthday, setBirthday] = useState("");
 
     const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const data = {
-        Username: username,
-        Password: password,
-        Email: email,
-        Birthday: birthday
-    };
-
-    fetch ("https://movieurl-6be02303c42f.herokuapp.com/users", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {"Content-Type": "application/json"}
-
-    }).then ((response)=>{
-        if (response.ok){
-            alert ("Account Created Successfully");
-            window.location.reload();
-        }else{
-            alert ("Signup Failed");
-        }
-    });
-};
+      event.preventDefault();
+  
+      const data = {
+          Username: username,
+          Password: password,
+          Email: email,
+          Birthday: birthday
+      };
+  
+      fetch("https://movieurl-6be02303c42f.herokuapp.com/users", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-Type": "application/json" }
+      }).then((response) => {
+          if (response.ok) {
+              alert("Account Created Successfully");
+              window.location.href = "/login"; // Redirect to root endpoint
+          } else {
+              alert("Signup Failed");
+          }
+      });
+  };
+  
 
 return (
     <Form onSubmit={handleSubmit}>
