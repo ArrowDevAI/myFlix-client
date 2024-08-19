@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "parcel build src/index.html --public-url /",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -16,7 +16,6 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.0",
     "moment": "^2.30.1",
-    "parcel": "^2.12.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.5.0",
@@ -30,6 +29,7 @@
     "@parcel/transformer-sass": "^2.12.0",
     "buffer": "^6.0.3",
     "eslint": "^7.32.0",
+    "parcel": "^2.12.0",
     "path-browserify": "^1.0.1",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
