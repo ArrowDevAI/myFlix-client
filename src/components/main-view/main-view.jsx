@@ -4,14 +4,15 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import {FavoriteView} from "../favorites-view/favorites-view"
 import { NavigationBar } from "../navigation-view/navigation-view";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Form from "react-bootstrap/Form"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./main-view.scss"
 import { EditProfile } from "../edit-profile/edit-profile";
 import { UpdatePassword} from "../update-password/update-password";
-import { FavoriteView } from "../favorites-view/favorites-view";  
 
 
 const MainView = () => {
@@ -22,12 +23,13 @@ const MainView = () => {
   const [movies, setMovies] = useState([]);
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
+  const [searchInput, setSearchInput] = useState("")
   
-
+  const searchResults = movies.filter((movie) => movie.title.toLowerCase().includes(searchInput.toLowerCase())
+  );
   const onUpdateUser = (updatedUser) => {
     localStorage.setItem("user", JSON.stringify(updatedUser));
   }
-
   useEffect(() => {
     if (!token) {
           return;
@@ -50,7 +52,6 @@ const MainView = () => {
         setMovies(moviesFromApi);
       });
   }, [token]);
-
  
   return (
     <BrowserRouter>
@@ -122,14 +123,31 @@ const MainView = () => {
             }
           />
 
-          <Route
+<Route
+
             path="/"
             element={
               <>
                 {!user ? (<Navigate to="/login" replace />) : movies.length === 0 ? (<Col>The List is Empty</Col>) : (
                   <>
-                    {movies.map((movieData) => (
-                      <Col className="mb-4" key={movieData.id} md={3}><MovieCard onUpdateUser = {onUpdateUser} token = {token} user={user} movieData={movieData} /> </Col>
+                    <Col md={12}>
+                      <Form.Control
+                        type="text"
+                        placeholder="Search movies..."
+                        value={searchInput}
+                        onChange={(e) => setSearchInput(e.target.value)}  // Update search input
+                        className="mb-4"
+                      />
+                    </Col>
+                    {searchResults.map((movieData) => (
+                      <Col className="mb-4" key={movieData.id} md={3}>
+                        <MovieCard
+                          onUpdateUser={onUpdateUser}
+                          token={token}
+                          user={user}
+                          movieData={movieData}
+                        />
+                      </Col>
                     ))}
                   </>
                 )}
